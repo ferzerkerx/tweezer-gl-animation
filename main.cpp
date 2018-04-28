@@ -54,7 +54,7 @@ int main(int argc, char **argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize(640, 480);
-    glutCreateWindow("Pregunta2 - Fernando Montes de Oca C. - 462328");
+    glutCreateWindow("Tweezer");
 
     glutReshapeFunc(resize);
     glutDisplayFunc(renderScene);
