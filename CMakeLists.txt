@@ -3,7 +3,7 @@ project(tweezer)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(tweezer main.cpp)
+add_executable(tweezer src/main.cpp)
 
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)

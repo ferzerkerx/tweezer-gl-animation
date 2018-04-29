@@ -6,6 +6,7 @@ tweezer.cbp
 tweezer
 .idea/
 Makefile
+*.cmake
 
 # Prerequisites
 *.d
