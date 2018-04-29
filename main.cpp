@@ -28,7 +28,7 @@ GLfloat mat_diffuse[] = {1.0f, 1.0f, 1.0f, 0.0f};
 GLfloat mat_specular[] = {0.3f, 0.3f, 0.3f, 1.0f};
 GLfloat high_shininess[] = {80.0f};
 
-void initweezer();
+void initTweezer();
 
 void drawCylinderSegment(int height);
 
@@ -79,7 +79,7 @@ int main(int argc, char **argv) {
 
 
     glutTimerFunc(10, myTimer, 1);
-    initweezer();
+    initTweezer();
 
     glutMainLoop();
     gluDeleteQuadric(sphere);
@@ -207,7 +207,7 @@ void processKeyEvents(int key, int mouseX, int mouseY) {
     glutPostRedisplay();
 }
 
-void initweezer() {
+void initTweezer() {
     sphere = gluNewQuadric();
     gluQuadricDrawStyle(sphere, GLU_FILL);
     gluQuadricNormals(sphere, GLU_SMOOTH);
