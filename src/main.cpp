@@ -18,7 +18,7 @@ GLUquadricObj *cylinder;
 float bigSegmentAngle = 90.0F;
 float smallSegmentAngle = 0.0F;
 
-GLfloat light0_specular[] = {0.5F, 0.5F, 0.5F, 0.5f};
+GLfloat light0_specular[] = {0.5F, 0.5F, 0.5F, 0.5F};
 GLfloat light0_ambient[] = {0.1F, 0.1F, 0.3F, 1.0F};
 GLfloat light0_diffuse[] = {.6F, .6F, 1.0F, 1.0F};
 GLint light0_position[] = {0, 4, 0, 0};
