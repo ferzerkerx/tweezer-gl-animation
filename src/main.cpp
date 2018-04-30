@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdio>
 #include <GL/glut.h>
-#include <memory.h>
+#include <memory>
 
 #define SMALL_SEGMENT_HEIGHT 3
 #define BIG_SEGMENT_HEIGHT 5
@@ -9,24 +9,24 @@
 int slices = 50;
 int stacks = 50;
 
-float xpos = 0.0f;
+float xpos = 0.0F;
 float delta = 0.5;
 bool anim = true;
 GLUquadricObj *sphere;
 GLUquadricObj *cylinder;
 
-float bigSegmentAngle = 90.0f;
-float smallSegmentAngle = 0.0f;
+float bigSegmentAngle = 90.0F;
+float smallSegmentAngle = 0.0F;
 
 GLfloat light0_specular[] = {0.5f, 0.5f, 0.5f, 0.5f};
-GLfloat light0_ambient[] = {0.1f, 0.1f, 0.3f, 1.0f};
-GLfloat light0_diffuse[] = {.6f, .6f, 1.0f, 1.0f};
+GLfloat light0_ambient[] = {0.1f, 0.1f, 0.3f, 1.0F};
+GLfloat light0_diffuse[] = {.6f, .6f, 1.0F, 1.0F};
 GLint light0_position[] = {0, 4, 0, 0};
 
-GLfloat mat_ambient[] = {0.7f, 0.7f, 0.7f, 1.0f};
-GLfloat mat_diffuse[] = {1.0f, 1.0f, 1.0f, 0.0f};
-GLfloat mat_specular[] = {0.3f, 0.3f, 0.3f, 1.0f};
-GLfloat high_shininess[] = {80.0f};
+GLfloat mat_ambient[] = {0.7f, 0.7f, 0.7f, 1.0F};
+GLfloat mat_diffuse[] = {1.0F, 1.0F, 1.0F, 0.0F};
+GLfloat mat_specular[] = {0.3f, 0.3f, 0.3f, 1.0F};
+GLfloat high_shininess[] = {80.0F};
 
 void initTweezer();
 
@@ -60,7 +60,7 @@ int main(int argc, char **argv) {
     glutDisplayFunc(renderScene);
     glutSpecialFunc(processKeyEvents);
 
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    glClearColor(1.0F, 1.0F, 1.0F, 1.0F);
 
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
@@ -108,18 +108,18 @@ void myTimer(int i) {
 
 void updateScene() {
     if (anim) {
-        if (bigSegmentAngle > 45.0f) {
+        if (bigSegmentAngle > 45.0F) {
             bigSegmentAngle -= delta;
         }
-        if (smallSegmentAngle < 90.0f) {
+        if (smallSegmentAngle < 90.0F) {
             smallSegmentAngle += delta;
         }
 
     } else {
-        if (bigSegmentAngle < 90.0f) {
+        if (bigSegmentAngle < 90.0F) {
             bigSegmentAngle += delta;
         }
-        if (smallSegmentAngle > 0.0f) {
+        if (smallSegmentAngle > 0.0F) {
             smallSegmentAngle -= delta;
         }
     }
