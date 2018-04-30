@@ -203,6 +203,7 @@ void processKeyEvents(int key, int mouseX, int mouseY) {
         case GLUT_KEY_RIGHT:
             xpos += delta;
             break;
+        default:break;
     }
     glutPostRedisplay();
 }
